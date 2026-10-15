@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FoodMapGIS.Entities/FoodMapGIS.Domain.csproj" Id="d3248773-8b23-434f-9324-7a9f694340a4" />
+  <Project Path="FoodMapGIS.Infrastructure/FoodMapGIS.Infrastructure.csproj" Id="8de5fe6c-dce8-4f9e-ac1a-dad76e42c63a" />
+  <Project Path="FoodMapGIS.Usecases/FoodMapGIS.Application.csproj" Id="8fa2fd72-007a-40b1-83e0-fad38035aff6" />
+  <Project Path="FoodMapGIS/FoodMapGIS.csproj" />
+</Solution>

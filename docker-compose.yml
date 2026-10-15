@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Dịch vụ Cơ sở dữ liệu PostgreSQL + PostGIS
+  foodmap-db:
+    image: postgis/postgis:16-3.4
+    container_name: foodmap_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: food_map_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres # Bạn có thể đổi mật khẩu này
+    ports:
+      - "5432:5432"
+    volumes:
+      # Giữ lại dữ liệu trên máy tính ngay cả khi tắt hoặc xóa container
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - foodmap-network
+
+volumes:
+  postgres_data:
+
+networks:
+  foodmap-network:
+    driver: bridge
